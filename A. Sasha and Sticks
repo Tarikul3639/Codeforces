@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+int main()
+{
+    ll tali_number;
+    ll move_number;
+    cin >> tali_number >> move_number;
+    ll max_move_numver = tali_number / move_number;
+    if (max_move_numver % 2 == 0)                           /// খাতায় টালি একে কর
+    {
+        cout << "NO" << nn;
+    }
+    else                                                    /// খাতায় টালি একে কর
+    {
+
+        cout << "YES" << nn;
+    }
+    return 0;                                                /// খাতায় টালি একে কর
+}
