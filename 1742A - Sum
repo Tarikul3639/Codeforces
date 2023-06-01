@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define nn '\n'
+int main()
+{
+    int t;
+    cin>>t;
+    while (t--)
+    {
+    
+    
+    int a,b,c;
+
+    cin>>a>>b>>c;
+    vector<int>data;
+    data.push_back(a);
+    data.push_back(b);
+    data.push_back(c);
+    sort(data.begin(),data.end());
+    for(int i=0;i<3;i++)
+    {
+        int value=data[0]+data[1];
+        if(value==data[2])
+        {
+            cout<<"YES"<<nn;
+            break;
+        }
+        else
+        {
+            cout<<"NO"<<nn;
+            break;
+        }
+    }
+}
+
+
+return 0;
+}
