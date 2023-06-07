@@ -1,0 +1,49 @@
+/*          Bismillahir Rahmanir Rahim
+                   ALLAHU AKBAR
+
+           ***Author : Tarikul islam
+     Bangladesh University of Business and Technology.
+                ** Dept.of CSE.  */
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+int main()
+{
+    string s1;
+    string s2;
+    cin >> s1 >> s2;
+      for (int i = 0; s1[i] != '\0'; i++)
+    {
+        if (s1[i] >= 'A' && s1[i] <= 'Z')
+        {
+            s1[i] += 32;
+        }
+    }
+    for (int i = 0; s2[i] != '\0'; i++)
+    {
+        if (s2[i] >= 'A' && s2[i] <= 'Z')
+        {
+            s2[i] += 32;
+        }
+    }
+    if(s1.compare(s2)>0)
+    {
+        cout << 1 << nn;
+    }
+    if(s1.compare(s2)<0)
+    {
+        cout << -1 << nn;
+
+    }
+    if(s1.compare(s2)==0)
+    {
+        cout << 0 << nn;
+    }
+
+
+    return 0;
+}
