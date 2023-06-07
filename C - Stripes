@@ -1,0 +1,68 @@
+/*          Bismillahir Rahmanir Rahim
+                   ALLAHU AKBAR
+
+           ***Author : Tarikul islam
+     Bangladesh University of Business and Technology.
+                ** Dept.of CSE.  */
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+int main()
+{
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+
+        vector<vector<char>> v;
+        char element;
+        for (ll i = 0; i < 8; i++)
+        {
+            vector<char> v2;
+            for (ll j = 0; j < 8; j++)
+            {
+
+                cin >> element;
+                v2.push_back(element);
+            }
+            v.push_back(v2);
+        }
+        // cout << "Matrix = " << nn;
+        // for (ll i = 0; i < 8; i++)
+        // {
+        //     for (ll j = 0; j < 8; j++)
+        //     {
+        //         cout << v[i][j];
+        //     }
+        //     cout << nn;
+        // }
+        ll d;
+        for (ll i = 0; i < 8; i++)
+        {
+            ll c = 0;
+
+            for (ll j = 0; j < 8; j++)
+            {
+                if (v[i][j] == 'R')
+                {
+                    c++;
+                }
+            }
+            d = c;
+            if (c == 8)
+            {
+                cout << "R" << nn;
+                break;
+            }
+        }
+        if (d != 8)
+        {
+            cout << 'B' << nn;
+        }
+    }
+    return 0;
+}
