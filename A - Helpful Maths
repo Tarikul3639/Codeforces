@@ -1,0 +1,41 @@
+/*          Bismillahir Rahmanir Rahim
+                   ALLAHU AKBAR
+
+           ***Author : Tarikul islam
+     Bangladesh University of Business and Technology.
+                ** Dept.of CSE.  */
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+int main()
+{
+    string s;
+
+    cin >> s;
+
+    int j = 0;
+
+    sort(s.begin(), s.end());
+
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] != '+')
+        {
+            s[j] = s[i];
+            j++;
+        }
+    }
+
+    for (int i = 0; i < j; i++)
+    {
+
+        cout << s[i];
+        if (i < j - 1)
+            cout << "+";
+    }
+    return 0;
+}
