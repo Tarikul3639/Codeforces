@@ -1,0 +1,48 @@
+/*          Bismillahir Rahmanir Rahim
+                   ALLAHU AKBAR
+
+           ***Author : Tarikul islam
+     Bangladesh University of Business and Technology.
+                ** Dept.of CSE.  */
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        string sum = "abcdefghijklmnopqrstuvwxyz";
+        int number;
+        cin >> number;
+        string s;
+        // for (int i = 0; i < number; i++)
+        // {
+            cin >> s;
+        // }
+        // sort(s.begin(),s.end());
+        // reverse(s.begin(),s.end());
+        char max = s[0];
+        for (int i = 0; i < number; i++)
+        {
+            if (max < s[i])
+            {
+                max = s[i];
+            }
+        }
+        for (int i = 0; i < sum.length(); i++)
+        {
+            if (max == sum[i])
+            {
+                cout << i + 1 << nn;
+            }
+        }
+        // cout<<max<<nn;
+    }
+    return 0;
+}
