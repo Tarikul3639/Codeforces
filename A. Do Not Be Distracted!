@@ -1,0 +1,68 @@
+/*          Bismillahir Rahmanir Rahim
+                   ALLAHU AKBAR
+
+           ***Author : Tarikul islam
+     Bangladesh University of Business and Technology.
+                ** Dept.of CSE.  */
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+int main()
+{
+    int t;
+
+    cin >> t;
+    while (t--)
+    {
+
+        int number;
+        cin >> number;
+        vector<char> s;
+        vector<char> s2;
+        for (int i = 0; i < number; i++)
+        {
+            char element;
+            cin >> element;
+            s.push_back(element);
+        }
+
+        for (int i = 0; i < number; i++)
+        {
+            if (s[i] != s[i + 1])
+            {
+                s2.push_back(s[i]);
+            }
+        }
+        //  for(int i=0;i<s2.size();i++)
+        // {
+        //     cout<<s2[i];
+        // }
+        // cout<<nn;
+        int cc=0;
+
+        for (int i = 0; i < s2.size(); i++)
+        {
+            for (int j = i + 1; j < s2.size(); j++)
+            {
+                if (s2[i] == s2[j])
+                {
+                    cc = 1;
+                }
+            }
+        }
+        if (cc == 1)
+        {
+            cout << "NO" << nn;
+        }
+        else
+        {
+            cout << "YES" << nn;
+        }
+    }
+
+    return 0;
+}
