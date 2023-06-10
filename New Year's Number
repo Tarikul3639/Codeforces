@@ -1,0 +1,45 @@
+/*##################################################################
+ #                   Bismillahir Rahmanir Rahim                    #
+ #                         ALLAHU AKBAR                            #
+ #                                                                 #
+ #                  ***Author : TARIKUL ISLAM                      #
+ #        Bangladesh University of Business and Technology,(BUBT)  #
+ #                      ** Dept.of CSE.                            #
+###################################################################*/
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+#define pb push_back
+#define asort(a) sort(a.begin(), a.end())
+#define areverse(a) reverse(a.begin(), a.end())
+#define sp " "
+int main()
+{
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        ll number;
+        cin>>number;
+        ll x = number / 2020;
+        ll y;
+        for (ll i = 0; i <= x; i++)
+        {
+            y = (x - i) * 2020 + (i * 2021);
+            if (number == y)
+            {
+                cout << "YES" << nn;
+                 break;
+            }
+        }
+        if (number != y)
+        {
+            cout << "NO" << nn;
+        }
+    }
+    return 0;
+}
