@@ -1,0 +1,78 @@
+/*##################################################################
+ #                   Bismillahir Rahmanir Rahim                    #
+ #                         ALLAHU AKBAR                            #
+ #                                                                 #
+ #                  ***Author : TARIKUL ISLAM                      #
+ #        Bangladesh University of Business and Technology,(BUBT)  #
+ #                      ** Dept.of CSE.                            #
+###################################################################*/
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+#define pb push_back
+#define asort(a) sort(a.begin(), a.end())
+#define areverse(a) reverse(a.begin(), a.end())
+#define sp " "
+#define test  \
+    ll t;     \
+    cin >> t; \
+    while (t--)
+int main()
+{
+    test
+    {
+        int number;
+        cin >> number;
+        vector<int> v;
+        for (int i = 0; i < number; i++)
+        {
+            int element;
+            cin >> element;
+            v.push_back(element);
+        }
+        int mn1 = v[0];
+        int mx1 = v[0];
+        int c1 = 0;
+        int c2 = 0;
+        for (int i = 0; i < number; i++)
+        {
+
+            if (mn1 >= v[i])
+            {
+                c1 = i + 1;
+                mn1 = v[i];
+            }
+            if (mx1 <= v[i])
+            {
+                c2 = i + 1;
+                mx1 = v[i];
+            }
+        }
+        // cout << c1 << nn << c2 << nn;
+        ///////////////////////////////////
+        ///////////////////////////////////
+        ///////////////////////////////////
+        int cc1 = number - c1 + 1;
+        int cc2 = number - c2 + 1;
+        // cout << cc1 << nn << cc2 << nn;
+        ///////////////////////////////////
+        ///////////////////////////////////
+        ///////////////////////////////////
+        int ccc1 = min(c1, c2);
+        int ccc2 = min(cc1, cc2);
+        // cout << ccc1+ccc2 <<nn;
+        ////////////////////////////////////
+        ////////////////////////////////////
+        ////////////////////////////////////
+        int x = max(c1, c2);
+        int y = max(cc1, cc2);
+        int z = ccc1 + ccc2;
+        cout << min(x, min(y, z)) << nn;
+    }
+
+    return 0;
+}
