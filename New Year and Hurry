@@ -1,0 +1,48 @@
+/*##################################################################
+ #                   Bismillahir Rahmanir Rahim                    #
+ #                         ALLAHU AKBAR                            #
+ #                                                                 #
+ #                  ***Author : TARIKUL ISLAM                      #
+ #        Bangladesh University of Business and Technology,(BUBT)  #
+ #                      ** Dept.of CSE.                            #
+###################################################################*/
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+#define pb push_back
+#define asort(a) sort(a.begin(), a.end())
+#define areverse(a) reverse(a.begin(), a.end())
+#define sp " "
+#define test  \
+    ll t;     \
+    cin >> t; \
+    while (t--)
+int main()
+{
+    int problem;
+    int minute;
+    cin >> problem;
+    cin >> minute;
+    int remind=240-minute;
+    int cc = 0;
+    int x=0;
+    for (int i = 1; i <= problem; i++)
+
+    {
+        int a=i*5;
+        x=a+x;
+        int y=remind-x;
+        if(y>=0)
+        {
+           cc++;
+        }
+        
+    }
+    cout << cc << nn;
+
+    return 0;
+}
