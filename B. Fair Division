@@ -1,0 +1,83 @@
+/*##################################################################
+ #                   Bismillahir Rahmanir Rahim                    #
+ #                         ALLAHU AKBAR                            #
+ #                                                                 #
+ #                  ***Author : TARIKUL ISLAM                      #
+ #        Bangladesh University of Business and Technology,(BUBT)  #
+ #                      ** Dept.of CSE.                            #
+###################################################################*/
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+#define pb push_back
+#define asort(a) sort(a.begin(), a.end())
+#define areverse(a) reverse(a.begin(), a.end())
+#define sp " "
+#define test  \
+    ll t;     \
+    cin >> t; \
+    while (t--)
+int main()
+{
+    test
+    {
+        vector<ll> v;
+        int number;
+        cin >> number;
+        for (int i = 0; i < number; i++)
+        {
+            ll element;
+            cin >> element;
+            v.pb(element);
+        }
+        ll sum = 0;
+        for (int i = 0; i < number; i++)
+        {
+            sum = sum + v[i];
+        }
+        // cout<<sum;
+        ll c = 0;
+        ll sum2 = 0;
+        if (sum % 2 == 0)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                if (v[i] == 2)
+                {
+                    sum2 = sum2 + v[i];
+                }
+            }
+             for (int i = 0; i < number; i++)
+            {
+                if (sum2 ==sum)
+                {
+                    for (int i = 0; i < number; i++)
+                    {
+                        if(v[i]==2)
+                        {
+                            c++;
+                        }
+                    }
+                    
+                }
+            }
+            if(c & 1)
+            {
+                cout<<"NO"<<nn;
+            }
+            else
+        {
+            cout<<"YES"<<nn;
+        }
+        }
+        else
+        {
+            cout<<"NO"<<nn;
+        }
+    }
+    return 0;
+}
