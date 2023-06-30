@@ -1,0 +1,47 @@
+/*##################################################################
+ #                   Bismillahir Rahmanir Rahim                    #
+ #                         ALLAHU AKBAR                            #
+ #                                                                 #
+ #                  ***Author : TARIKUL ISLAM                      #
+ #        Bangladesh University of Business and Technology,(BUBT)  #
+ #                      ** Dept.of CSE.                            #
+###################################################################*/
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nn '\n'
+#define EPS 1e-9
+#define PI 3.1415926535897932384626433832795
+#define pb push_back
+#define asort(a) sort(a.begin(), a.end())
+#define areverse(a) reverse(a.begin(), a.end())
+#define sp " "
+#define no cout << "NO" << nn
+#define yes cout << "YES" << nn
+#define test  \
+    ll t;     \
+    cin >> t; \
+    while (t--)
+int main()
+{
+    map<int, int> mp;
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        int s;
+        cin >> s;
+        mp[s]++;
+    }
+    int ans = 0;
+    for (auto it : mp)
+    // for(int i = 0; i < n; i++)
+    {
+        int x = it.second;
+        ans = max(ans, x);
+    }
+
+    cout << ans << nn;
+    return 0;
+}
